@@ -86,6 +86,11 @@ type VirtualServerProperties struct {
 		MIMEDefault             *string `json:"mime_default,omitempty"`
 		MIMEDetect              *bool   `json:"mime_detect,omitempty"`
 	} `json:"http"`
+	KerberosProtocolTransition struct {
+		Enabled   *bool   `json:"enabled,omitempty"`
+		Principal *string `json:"principal,omitempty"`
+		Target    *string `json:"target,omitempty"`
+	} `json:"kerberos_protocol_transition"`
 	Log struct {
 		ClientConnectionFailures  *bool   `json:"client_connection_failures,omitempty"`
 		Enabled                   *bool   `json:"enabled,omitempty"`

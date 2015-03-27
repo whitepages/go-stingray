@@ -57,6 +57,11 @@ type PoolProperties struct {
 		MaxReplyTime          *int `json:"max_reply_time,omitempty"`
 		QueueTimeout          *int `json:"queue_timeout,omitempty"`
 	} `json:"connection"`
+	DNSAutoscale struct {
+		Enabled   *bool     `json:"enabled,omitempty"`
+		Hostnames *[]string `json:"hostnames,omitempty"`
+		Port      *int      `json:"port,omitempty"`
+	} `json:"dns_autoscale"`
 	FTP struct {
 		SupportRFC2428 *bool `json:"support_rfc_2428,omitempty"`
 	} `json:"ftp"`
@@ -64,6 +69,10 @@ type PoolProperties struct {
 		Keepalive              *bool `json:"keepalive,omitempty"`
 		KeepaliveNonIdempotent *bool `json:"keepalive_non_idempotent,omitempty"`
 	} `json:"http"`
+	KerberosProtocolTransition struct {
+		Principal *string `json:"principal,omitempty"`
+		Target    *string `json:"target,omitempty"`
+	} `json:"kerberos_protocol_transition"`
 	LoadBalancing struct {
 		Algorithm       *string `json:"algorithm,omitempty"`
 		PriorityEnabled *bool   `json:"priority_enabled,omitempty"`
