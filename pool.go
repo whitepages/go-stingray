@@ -42,6 +42,7 @@ type PoolProperties struct {
 		MaxIdleConnectionsPerNode     *int        `json:"max_idle_connections_pernode,omitempty"`
 		MaxTimedOutConnectionAttempts *int        `json:"max_timed_out_connection_attempts,omitempty"`
 		Monitors                      *[]string   `json:"monitors,omitempty"`
+		NodeCloseWithRST              *bool       `json:"node_close_with_rst,omitempty"`
 		NodeConnectionAttempts        *int        `json:"node_connection_attempts,omitempty"`
 		NodesTable                    *NodesTable `json:"nodes_table,omitempty"`
 		PassiveMonitoring             *bool       `json:"passive_monitoring,omitempty"`
@@ -56,6 +57,11 @@ type PoolProperties struct {
 		MaxReplyTime          *int `json:"max_reply_time,omitempty"`
 		QueueTimeout          *int `json:"queue_timeout,omitempty"`
 	} `json:"connection"`
+	DNSAutoscale struct {
+		Enabled   *bool     `json:"enabled,omitempty"`
+		Hostnames *[]string `json:"hostnames,omitempty"`
+		Port      *int      `json:"port,omitempty"`
+	} `json:"dns_autoscale"`
 	FTP struct {
 		SupportRFC2428 *bool `json:"support_rfc_2428,omitempty"`
 	} `json:"ftp"`
@@ -63,6 +69,10 @@ type PoolProperties struct {
 		Keepalive              *bool `json:"keepalive,omitempty"`
 		KeepaliveNonIdempotent *bool `json:"keepalive_non_idempotent,omitempty"`
 	} `json:"http"`
+	KerberosProtocolTransition struct {
+		Principal *string `json:"principal,omitempty"`
+		Target    *string `json:"target,omitempty"`
+	} `json:"kerberos_protocol_transition"`
 	LoadBalancing struct {
 		Algorithm       *string `json:"algorithm,omitempty"`
 		PriorityEnabled *bool   `json:"priority_enabled,omitempty"`

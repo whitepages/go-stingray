@@ -21,6 +21,7 @@ type VirtualServerProperties struct {
 		AddXForwardedFor   *bool   `json:"add_x_forwarded_for,omitempty"`
 		AddXForwardedProto *bool   `json:"add_x_forwarded_proto,omitempty"`
 		BandwidthClass     *string `json:"bandwidth_class,omitempty"`
+		CloseWithRST       *bool   `json:"close_with_rst,omitempty"`
 		// To disable a rule, add a / before the name (e.g.
 		// "example" -> "/example")
 		CompletionRules      *[]string `json:"completionrules,omitempty"`
@@ -85,14 +86,20 @@ type VirtualServerProperties struct {
 		MIMEDefault             *string `json:"mime_default,omitempty"`
 		MIMEDetect              *bool   `json:"mime_detect,omitempty"`
 	} `json:"http"`
+	KerberosProtocolTransition struct {
+		Enabled   *bool   `json:"enabled,omitempty"`
+		Principal *string `json:"principal,omitempty"`
+		Target    *string `json:"target,omitempty"`
+	} `json:"kerberos_protocol_transition"`
 	Log struct {
-		ClientConnectionFailures *bool   `json:"client_connection_failures,omitempty"`
-		Enabled                  *bool   `json:"enabled,omitempty"`
-		Filename                 *string `json:"filename,omitempty"`
-		Format                   *string `json:"format,omitempty"`
-		Save                     *bool   `json:"save_all,omitempty"`
-		ServerConnectionFailures *bool   `json:"server_connection_failures,omitempty"`
-		SSLFailures              *bool   `json:"ssl_failures,omitempty"`
+		ClientConnectionFailures  *bool   `json:"client_connection_failures,omitempty"`
+		Enabled                   *bool   `json:"enabled,omitempty"`
+		Filename                  *string `json:"filename,omitempty"`
+		Format                    *string `json:"format,omitempty"`
+		Save                      *bool   `json:"save_all,omitempty"`
+		ServerConnectionFailures  *bool   `json:"server_connection_failures,omitempty"`
+		SessionPersistenceVerbose *bool   `json:"session_persistence_verbose,omitempty"`
+		SSLFailures               *bool   `json:"ssl_failures,omitempty"`
 	} `json:"log"`
 	RecentConnections struct {
 		Enabled *bool `json:"enabled,omitempty"`
