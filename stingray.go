@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	basePath = "/api/tm/3.0/config/active/"
+	basePath = "/api/tm/3.1/config/active/"
 )
 
 // A Client manages communication with the Stingray API.
