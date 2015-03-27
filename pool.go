@@ -42,6 +42,7 @@ type PoolProperties struct {
 		MaxIdleConnectionsPerNode     *int        `json:"max_idle_connections_pernode,omitempty"`
 		MaxTimedOutConnectionAttempts *int        `json:"max_timed_out_connection_attempts,omitempty"`
 		Monitors                      *[]string   `json:"monitors,omitempty"`
+		NodeCloseWithRST              *bool       `json:"node_close_with_rst,omitempty"`
 		NodeConnectionAttempts        *int        `json:"node_connection_attempts,omitempty"`
 		NodesTable                    *NodesTable `json:"nodes_table,omitempty"`
 		PassiveMonitoring             *bool       `json:"passive_monitoring,omitempty"`
