@@ -144,11 +144,13 @@ type VirtualServerProperties struct {
 		SendCloseAlerts        *bool                       `json:"send_close_alerts,omitempty"`
 		ServerCertDefault      *string                     `json:"server_cert_default,omitempty"`
 		ServerCertHostMapping  *ServerCertHostMappingTable `json:"server_cert_host_mapping,omitempty"`
+		SignatureAlgorithms    *string                     `json:"signature_algorithms,omitempty"`
 		SSLCiphers             *string                     `json:"ssl_ciphers,omitempty"`
 		SSLSupportSSL2         *string                     `json:"ssl_support_ssl2,omitempty"`
 		SSLSupportSSL3         *string                     `json:"ssl_support_ssl3,omitempty"`
 		SSLSupportTLS1         *string                     `json:"ssl_support_tls1,omitempty"`
 		SSLSupportTLS11        *string                     `json:"ssl_support_tls1_1,omitempty"`
+		SSLSupportTLS12        *string                     `json:"ssl_support_tls1_2,omitempty"`
 		TrustMagic             *bool                       `json:"trust_magic,omitempty"`
 	} `json:"ssl"`
 	Syslog struct {
