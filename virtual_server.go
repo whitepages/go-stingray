@@ -67,6 +67,7 @@ type VirtualServerProperties struct {
 	DNS struct {
 		EDNSUDPSize *int      `json:"edns_udpsize,omitempty"`
 		MaxUDPSize  *int      `json:"max_udpsize,omitempty"`
+		RRSetOrder  *string   `json:"rrset_order,omitempty"`
 		Verbose     *bool     `json:"verbose,omitempty"`
 		Zones       *[]string `json:"zones,omitempty"`
 	} `json:"dns"`
@@ -80,6 +81,7 @@ type VirtualServerProperties struct {
 	Gzip struct {
 		CompressLevel *int      `json:"compress_level,omitempty"`
 		Enabled       *bool     `json:"enabled,omitempty"`
+		ETagRewrite   *string   `json:"etag_rewrite,omitempty"`
 		IncludeMIME   *[]string `json:"include_mime,omitempty"`
 		MaxSize       *int      `json:"max_size,omitempty"`
 		MinSize       *int      `json:"min_size,omitempty"`
@@ -139,6 +141,7 @@ type VirtualServerProperties struct {
 	SSL struct {
 		AddHTTPHeaders         *bool                       `json:"add_http_headers,omitempty"`
 		ClientCertCAs          *[]string                   `json:"client_cert_cas,omitempty"`
+		EllipticCurves         *[]string                   `json:"elliptic_curves,omitempty"`
 		IssuedCertsNeverExpire *[]string                   `json:"issued_certs_never_expire,omitempty"`
 		OCSPEnable             *bool                       `json:"ocsp_enable,omitempty"`
 		OCSPIssuers            *OCSPIssuersTable           `json:"ocsp_issuers,omitempty"`
