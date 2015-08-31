@@ -45,6 +45,8 @@ type PoolProperties struct {
 		Monitors                      *[]string   `json:"monitors,omitempty"`
 		NodeCloseWithRST              *bool       `json:"node_close_with_rst,omitempty"`
 		NodeConnectionAttempts        *int        `json:"node_connection_attempts,omitempty"`
+		NodeDeleteBehavior            *string     `json:"node_delete_behavior,omitempty"`
+		NodeDrainToDeleteTimeout      *int        `json:"node_drain_to_delete_timeout,omitempty"`
 		NodesTable                    *NodesTable `json:"nodes_table,omitempty"`
 		PassiveMonitoring             *bool       `json:"passive_monitoring,omitempty"`
 		PersistenceClass              *string     `json:"persistence_class,omitempty"`
