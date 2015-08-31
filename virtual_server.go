@@ -43,6 +43,7 @@ type VirtualServerProperties struct {
 		SoNagle              *bool     `json:"so_nagle,omitempty"`
 		SSLClientCertHeaders *string   `json:"ssl_client_cert_headers,omitempty"`
 		SSLDecrypt           *bool     `json:"ssl_decrypt,omitempty"`
+		SSLHonorFallbackSCSV *string   `json:"ssl_honor_fallback_scsv,omitempty"`
 	} `json:"basic"`
 	Connection struct {
 		Keepalive              *bool   `json:"keepalive,omitempty"`
@@ -64,8 +65,10 @@ type VirtualServerProperties struct {
 		Secure      *string `json:"secure,omitempty"`
 	} `json:"cookie"`
 	DNS struct {
-		EDNSUDPSize *int `json:"edns_udpsize,omitempty"`
-		MaxUDPSize  *int `json:"max_udpsize,omitempty"`
+		EDNSUDPSize *int      `json:"edns_udpsize,omitempty"`
+		MaxUDPSize  *int      `json:"max_udpsize,omitempty"`
+		Verbose     *bool     `json:"verbose,omitempty"`
+		Zones       *[]string `json:"zones,omitempty"`
 	} `json:"dns"`
 	FTP struct {
 		DataSourcePort    *int  `json:"data_source_port,omitempty"`
