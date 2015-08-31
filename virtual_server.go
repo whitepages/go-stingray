@@ -63,6 +63,10 @@ type VirtualServerProperties struct {
 		PathReplace *string `json:"path_replace,omitempty"`
 		Secure      *string `json:"secure,omitempty"`
 	} `json:"cookie"`
+	DNS struct {
+		EDNSUDPSize *int `json:"edns_udpsize,omitempty"`
+		MaxUDPSize  *int `json:"max_udpsize,omitempty"`
+	} `json:"dns"`
 	FTP struct {
 		DataSourcePort    *int  `json:"data_source_port,omitempty"`
 		ForceClientSecure *bool `json:"force_client_secure,omitempty"`
