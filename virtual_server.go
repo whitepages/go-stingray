@@ -17,11 +17,12 @@ type VirtualServerProperties struct {
 		Profile *ProfileTable `json:"profile,omitempty"`
 	} `json:"aptimizer"`
 	Basic struct {
-		AddClusterIP       *bool   `json:"add_cluster_ip,omitempty"`
-		AddXForwardedFor   *bool   `json:"add_x_forwarded_for,omitempty"`
-		AddXForwardedProto *bool   `json:"add_x_forwarded_proto,omitempty"`
-		BandwidthClass     *string `json:"bandwidth_class,omitempty"`
-		CloseWithRST       *bool   `json:"close_with_rst,omitempty"`
+		AddClusterIP             *bool   `json:"add_cluster_ip,omitempty"`
+		AddXForwardedFor         *bool   `json:"add_x_forwarded_for,omitempty"`
+		AddXForwardedProto       *bool   `json:"add_x_forwarded_proto,omitempty"`
+		AutodetectUpgradeHeaders *bool   `json:"autodetect_upgrade_headers,omitempty"`
+		BandwidthClass           *string `json:"bandwidth_class,omitempty"`
+		CloseWithRST             *bool   `json:"close_with_rst,omitempty"`
 		// To disable a rule, add a / before the name (e.g.
 		// "example" -> "/example")
 		CompletionRules      *[]string `json:"completionrules,omitempty"`
@@ -44,6 +45,7 @@ type VirtualServerProperties struct {
 		SSLClientCertHeaders *string   `json:"ssl_client_cert_headers,omitempty"`
 		SSLDecrypt           *bool     `json:"ssl_decrypt,omitempty"`
 		SSLHonorFallbackSCSV *string   `json:"ssl_honor_fallback_scsv,omitempty"`
+		Transparent          *bool     `json:"transparent,omitempty"`
 	} `json:"basic"`
 	Connection struct {
 		Keepalive              *bool   `json:"keepalive,omitempty"`
