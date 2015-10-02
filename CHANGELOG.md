@@ -1,3 +1,5 @@
+## 1.2.1
+
 * Remove dns section from pool
 
 ## 1.2.0
